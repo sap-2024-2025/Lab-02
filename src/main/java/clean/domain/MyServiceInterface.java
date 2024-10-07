@@ -2,7 +2,7 @@ package clean.domain;
 
 /**
  * 
- * Business Logic Layer
+ * Business Logic Layer | InboundPort
  * 
  * - service / application
  * - domain
@@ -10,7 +10,7 @@ package clean.domain;
  */
 public interface MyServiceInterface {
 
-	void doMyUseCaseCmd();
+	void doIncCmd();
 	
-	int doMyUseCaseQuery();
+	int doGetValueQuery();
 }

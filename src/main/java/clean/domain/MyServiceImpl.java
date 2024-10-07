@@ -23,7 +23,7 @@ public class MyServiceImpl implements MyServiceInterface {
 	}
 	
 	@Override
-	public void doMyUseCaseCmd() {
+	public void doIncCmd() {
 		count.inc();
 		
 		/* persistance */
@@ -41,7 +41,7 @@ public class MyServiceImpl implements MyServiceInterface {
 	}
 
 	@Override
-	public int doMyUseCaseQuery() {
+	public int doGetValueQuery() {
 		return count.getValue();
 	}
 	

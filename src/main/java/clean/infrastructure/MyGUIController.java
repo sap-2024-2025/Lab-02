@@ -24,12 +24,12 @@ public class MyGUIController implements NotificationInterface {
 	
 	public void notifyUpdateRequest() {
 		logger.log(Level.INFO, "New request - use case cmd ");
-		domainLayer.doMyUseCaseCmd();
+		domainLayer.doIncCmd();
 	}
 	
 	public void notifyQueryRequest() {
 		logger.log(Level.INFO, "New request - query ");
-		int res = domainLayer.doMyUseCaseQuery();
+		int res = domainLayer.doGetValueQuery();
 		view.updateValue(res);
 	}
 

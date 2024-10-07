@@ -78,7 +78,7 @@ public class MyWebController extends AbstractVerticle implements NotificationInt
 	protected void processServiceRequestCmd(RoutingContext context) {
 		logger.log(Level.INFO, "New request - use case cmd " + context.currentRoute().getPath());
 		JsonObject reply = new JsonObject();
-		domainLayer.doMyUseCaseCmd();
+		domainLayer.doIncCmd();
 		reply.put("result", "ok");
 		sendReply(context, reply);
 	}
@@ -86,7 +86,7 @@ public class MyWebController extends AbstractVerticle implements NotificationInt
 	protected void processServiceRequestQuery(RoutingContext context) {
 		logger.log(Level.INFO, "New request - query " + context.currentRoute().getPath());
 		JsonObject reply = new JsonObject();
-		int res = domainLayer.doMyUseCaseQuery();
+		int res = domainLayer.doGetValueQuery();
 		reply.put("result", "ok");
 		reply.put("value", res);
 		sendReply(context, reply);
